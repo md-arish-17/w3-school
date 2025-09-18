@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3 School</title>
+    <script src="https://kit.fontawesome.com/e2316e88b9.js" crossorigin="anonymous"></script>
+    <style>
+        
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .super-parent{
+            position: fixed;
+        }
+        .topNavBar{
+            height: 45px;
+            width: 100vw;
+            background-color: #1D2A35;
+            padding-right: 16px;
+            
+           
+            
+        }
+        .topNavBar img {
+           
+            height: 42px;
+            width: 50px; 
+            float: left;
+
+        }
+        .topNavBar a {
+            padding: 15px;
+            float: left; 
+            color: #dddddd;
+        }
+        .topNavBar :hover{
+            /* background-color: #04AA6D; */
+            padding-bottom: 0px;
+        }
+        .topNavBar input{
+            height: 28px;
+            width: 200px;
+            float: left;
+            margin-top: 6px;
+            padding: 0px 15px 0px 15px;
+            border-radius: 25px;
+         }
+         .topNavBar input:hover{
+            background-color: white;
+            padding-bottom:0px ;
+         }
+         .userInfo{
+            float: right;
+            padding-bottom: 0px;
+            
+         }
+         .userInfo a:hover{
+            background-color: #04aa6de0;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding: 15px 15px;
+         }
+
+         .extraInfo {
+            margin-left: 850px;
+            font-weight:600;
+
+         }
+
+
+         .extraInfo a:hover{
+            background-color: #3e4048;
+            border-radius: 20px;
+            padding-bottom: 12px;
+         }
+        
+        .parent{
+            background-color: #282A35;
+            padding: 20px;
+            height: -0px;
+            width: 100vw;     
+            /* position: fixed; */
+                   
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-family:Arial, Helvetica, sans-serif;
+            
+            padding-left: 20px;
+            padding: 17px;
+        }
+        
+      
+         .container{
+            margin-left: -20px;
+            margin-top: 25px;  
+            position: fixed;
+            background-color: #1c242b;;
+            height: 47px;
+            padding: 12px;
+            padding-top: 15px;
+            width: 100vw;
+            
+
+         }
+        .contain:hover{
+            background-color: #000000;    
+            /* padding: 10px 1px 10px 0px;  */
+            /* padding-bottom: 11px; */
+            padding: 17px;
+            /* padding-top: 4px; */
+            /* padding-bottom: -10px; */
+        }
+        .sideBarUpper{
+            height:800vh;
+            padding-top: 45px;
+            width: 20%;
+            border: solid black 1px;
+            /* position: fixed; */
+            background-color: #15202B;
+            color: #CCCCCC;
+            font-family: Arial, Helvetica, sans-serif;
+            font: 21px;
+            /* overflow-y:scroll; */
+            display: inline-block;
+            /* margin-top: 44px; */
+            
+
+
+        }
+        .sideBarUpper h2{
+            margin-left: 12px;
+            margin-top: 15px;
+            font-weight: lighter    ;
+        }
+         .sub{
+            display: block;
+            margin-left: 20px;
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+         }
+         .sub:hover{
+            background-color: #282A35;
+            
+         }
+        .right-side-header a:hover{
+            background-color: #04aa6de0;
+            padding-bottom: 10px;
+        }
+        .mainPage h1{
+            float: left;
+            margin: 150px 0px 0px 25px;
+            font-weight:200;
+            font-size: 50px;
+            color: #DDDDDD;
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+        }
+        .mainPage{
+            background-color: #1D2A35;
+            height:800vh;
+            width: 100%;
+            /* position:relative; */
+            display: inline-block;
+            /* margin-left: 300px; */
+            
+        }
+        .btn1{
+            height: 60px;
+            width: 150px;
+            border: solid #04AA6D;
+            border-radius: 10px;
+            float: left;
+            font-weight: bold;
+            background-color: #04AA6D;
+            color: white;
+            font-size: large;
+            /* margin-top:250px ; */
+            margin: 20px 300px 0px 20px ;
+        }
+        .btn2{
+            height: 60px;
+            width: 150px;
+            border: solid #04AA6D;
+            border-radius: 10px;
+            float: left;
+            font-weight: bold;
+            background-color: #04AA6D;
+            color: white;
+            font-size: large;
+            /* margin-top:250px ; */
+            margin: 20px 00px 0px 400px ;
+        }
+        .mainPage p {
+            color: #CCCCCC;
+            float: left;
+            font-size: 25px;
+            margin-left: 22px;
+            margin-top: 30px;
+            width: 100%;
+        }
+        span{
+            color: #FF9999;
+            background-color: #DEDEDE1f;
+        }
+        .mainPage h2{
+            float: left;
+            margin: 30px 0px 0px 25px;
+            font-weight:lighter;
+            font-size: 50px;
+            color: #DDDDDD;
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+            width: 100%;
+        }
+        /* .mainPageList {
+            color: #CCCCCC;
+            float: left;
+            font-size: 25px;
+            display: block;
+            margin-right: 750px; 
+            margin-top: 60px;
+            margin-left: -300px;
+            
+            
+        } */
+        ul{
+            color: #CCCCCC;
+            font-size: 25px;
+            float: left;
+            margin: 20px 0px 0px 80px ;
+            width: 100%;
+        }
+        .btn1:hover{
+            background-color: #04aa6db6;
+            cursor: pointer;
+        }
+        .btn2:hover{
+            background-color: #04aa6db6;
+            cursor:pointer;
+        }
+        .span1{
+            border: solid #04AA6D 5px;
+            color: #CCCCCC;
+        }
+        .wholeContent{
+            height: 800vh;
+            width: fit-content;
+            /* border: solid red 3px; */
+            display: flex;
+        }
+       
+        ::-webkit-scrollbar-track {
+            background-color: #15202B;
+        }
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #363847;
+            
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #494b54;
+        }
+        table{
+            color: #CCCCCC;  
+            margin: 30px 0px 0px 30px;
+            float: left;         
+        }
+        table th{
+            font-size: x-large;
+        }
+        tr{
+            font-size: larger;
+        }
+        .btn3{
+            border: #f3faf7;
+            background-color: #04AA6D;
+            height: 60px;
+            width: 80%;
+            float: left;
+            font-size: x-large;
+            margin:50px;
+            color: #CCCCCC;
+            font-weight: lighter;
+        }
+        .btn3:hover{
+            cursor: pointer;
+            background-color: #04aa6dbb;
+        }
+       
+        
+    </style>
+        <link rel="shortcut icon" href="77673807.png" type="image/x-icon">
+</head>
+<body>
+    <div class="super-parent">
+        <div class="topNavBar">
+                 <img src="logo (2).png" alt="">
+              <div class="right-side-header">
+                 <a href="">Tutorial</a>
+                 <a href="">Exercises</a>
+                 <a href="">Certificates</a>
+                 <a href="">Services</a>
+              </div>
+       
+           <input type="text" placeholder="Search...">
+
+           <!-- <i class="fa-solid fa-toggle-on"></i> -->
+              <div class="extraInfo">
+           <a href="">Plus</a>
+           <a href="">Spaces</a>
+           <a href="">Get Certified</a>
+              </div>
+              <div class="userInfo">
+              <a href="">Sign Up</a>
+              <a href="">Login</a>
+              </div>
+        </div>      
+    </div>
+    <div class="parent">
+        <div class="container">
+             <a href="" class="contain" >HTML</a>
+             <a href="" class="contain">CSS</a>
+             <a href="" class="contain">JAVASCRIPT</a>
+             <a href="" class="contain">SQL</a>
+             <a href="" class="contain">PYTHON</a>
+             <a href="" class="contain">JAVA</a>
+             <a href="" class="contain">PHP</a>
+             <a href="" class="contain">HOW TO</a>
+             <a href="" class="contain">W3.CSS</a>
+             <a href="" class="contain">C</a>
+             <a href="" class="contain">C++</a>
+             <a href="" class="contain">C#</a>
+             <a href="" class="contain">BOOTSTRAP</a>
+             <a href="" class="contain">REACT</a>
+             <a href="" class="contain">MYSQL</a>
+          
+        </div>
+    </div>
+
+<div class="wholeContent">
+    <div class="sideBarUpper">
+           <h2>CSS Tutorial</h2>
+           <a href="" class="sub">CSS HOME</a>
+           <a href="" class="sub">CSS Introduction</a>
+           <a href="" class="sub">CSS Syntax</a>
+           <a href="" class="sub">CSS Selectors</a>
+           <a href="" class="sub">CSS How To</a>
+           <a href="" class="sub">CSS Comments</a>
+           <a href="" class="sub">CSS Colors</a>
+           <a href="" class="sub">CSS Backgrounds</a>
+           <a href="" class="sub">CSS Borders</a>
+           <a href="" class="sub">CSS Margins</a>
+           <a href="" class="sub">CSS Padding</a>
+           <a href="" class="sub">CSS Height/Width</a>
+           <a href="" class="sub">CSS Box Model</a>
+           <a href="" class="sub">CSS Outline</a>
+           
+           <a href="" class="sub">CSS Text</a>
+           <a href="" class="sub">CSS Fonts</a>
+           <a href="" class="sub">CSS Icons</a>
+           <a href="" class="sub">CSS Links</a>
+           <a href="" class="sub">CSS Lists</a>
+           <a href="" class="sub">CSS Tables </a>
+           <a href="" class="sub">CSS Display</a>
+           <a href="" class="sub">CSS Max-width</a>
+           <a href="" class="sub">CSS Position</a>
+           <a href="" class="sub">CSS Z-index</a>
+           <a href="" class="sub">CSS Overflow</a>
+           <a href="" class="sub">CSS Float</a>
+           <a href="" class="sub">CSS Inline-block</a>
+           <a href="" class="sub">CSS Align</a>
+           <a href="" class="sub">CSS Combinators</a>
+           <a href="" class="sub">CSS Pseudo-class</a>
+           <a href="" class="sub">CSS Pseudo-element</a>
+           <a href="" class="sub">CSS Opacity</a>
+           <a href="" class="sub">CSS Navigation Bar</a>
+           <a href="" class="sub">CSS Dropdowns</a>
+           <a href="" class="sub">CSS Image Gallery</a>
+           <a href="" class="sub">CSS Image Sprites</a>
+           <a href="" class="sub">CSS Attr Selectors</a>
+           <a href="" class="sub">CSS Forms</a>
+           <a href="" class="sub">CSS Counters</a>
+           <a href="" class="sub">CSS Website Layout</a>
+           <a href="" class="sub">CSS Units</a>
+           <a href="" class="sub">CSS Specificity</a>
+           <a href="" class="sub">CSS !Important</a>
+           <a href="" class="sub">CSS Math Functions</a>
+           <h2>CSS Advanced</h2>
+           <a href="" class="sub">CSS Rounded Corners</a>
+           <a href="" class="sub">CSS Border Images</a>
+           <a href="" class="sub">CSS Backgrounds</a>
+           <a href="" class="sub">CSS Colors</a>
+           <a href="" class="sub">CSS Color Keywords</a>
+           <a href="" class="sub">CSS Gradients</a>
+           <a href="" class="sub">CSS Shadows</a>
+           <a href="" class="sub">CSS Text Effects</a>
+           <a href="" class="sub">CSS Web Fonts</a>
+           <a href="" class="sub">CSS 2D Transforms</a>
+           <a href="" class="sub">CSS 3D Transforms</a>
+           <a href="" class="sub">CSS Transitions</a>
+           <a href="" class="sub">CSS Animations</a>
+           <a href="" class="sub">CSS Tooltips</a>
+           <a href="" class="sub">CSS Style Images</a>
+           <a href="" class="sub">CSS Image Reflection</a>
+           <a href="" class="sub">CSS object-fit</a>
+           <a href="" class="sub">CSS object-position</a>
+           <a href="" class="sub">CSS Masking</a>
+           <a href="" class="sub">CSS Buttons</a>
+           <a href="" class="sub">CSS Pagination</a>
+           <a href="" class="sub">CSS Multiple Columns</a>
+           <a href="" class="sub">CSS User Interface</a>
+           <a href="" class="sub">CSS Variables</a>
+           <a href="" class="sub">CSS Box Sizing</a>
+           <a href="" class="sub">CSS Media Queries</a>
+           <a href="" class="sub">CSS MQ Examples</a>
+           <a href="" class="sub">CSS Flexbox</a>
+           <h2>CSS Responsive</h2>
+           <a href="" class="sub">RWD Intro</a>
+           <a href="" class="sub">RWD Viewport</a>
+           <a href="" class="sub">RWD Grid View</a>
+           <a href="" class="sub">RWD Media Queries</a>
+           <a href="" class="sub">RWD Images</a>
+           <a href="" class="sub">RWD Videos</a>
+           <a href="" class="sub">RWD Frameworks</a>
+           <a href="" class="sub">RWD Templates</a>
+           <h2>CSS Grid</h2>
+           <a href="" class="sub">Grid Intro</a>
+           <a href="" class="sub">Grid Container</a>
+           <a href="" class="sub">Grid Item</a>
+           <h2>CSS SASS</h2>
+           <a href="" class="sub">SASS Tutorial</a>
+           <h2>CSS Examples</h2>
+           <a href="" class="sub">CSS Templates</a>
+           <a href="" class="sub">CSS Examples</a>
+           <a href="" class="sub">CSS Editor</a>
+           <a href="" class="sub">CSS Snippets</a>
+           <a href="" class="sub">CSS Quiz</a>
+           <a href="" class="sub">CSS Exercises</a>
+           <a href="" class="sub">CSS Website</a>
+           <a href="" class="sub">CSS Interview prep</a>
+           <a href="" class="sub">CSS Bootcamp</a>
+           <a href="" class="sub">CSS Certificate</a>
+           <h2>CSS References</h2>
+           <a href="" class="sub">CSS Reference</a>
+           <a href="" class="sub">CSS Selectors</a>
+           <a href="" class="sub">CSS Functions</a>
+           <a href="" class="sub">CSS Reference Aural</a>
+           <a href="" class="sub">CSS Web Safe Fonts</a>
+           <a href="" class="sub">CSS Animatable</a>
+           <a href="" class="sub">CSS Units</a>
+           <a href="" class="sub">CSS PX-EM Convertor</a>
+           <a href="" class="sub">CSS Colors</a>
+           <a href="" class="sub">CSS Color Values</a>
+           <a href="" class="sub">CSS Deafult Values</a>
+           <a href="" class="sub">CSS Browser Support</a>
+    </div>
+
+
+   <div class="mainPage">
+         <h1>CSS Layout - The display Property</h1>
+         <button type="button" class="btn1">Previous</button>
+         <button type="button" class="btn2">Next</button>
+         <p>The <span>display</span> property is the most important CSS property for controlling layout.</p>
+         <h2>The display property</h2>
+         <p>The <span>display</span> property is used to specify how an element is shown on a web page.</p>
+         <p>Every HTML element has a default display value, depending on what type of element it is.The default display value for most elements is <span>block</span> or <span>inline</span>.</p>
+         <p>The <span>display</span> property is used to change the default display behavior of HTML elements.</p>
+         <h2>Block-level Elements</h2>
+         <p>A block-level element ALWAYS starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+         <p style="border: 5px solid #04AA6D; width: 80%;">The div element is a block-level element.</p>
+         <p>Examples of block-level elements :-</p>
+            <ul >
+                <li >div</li>
+                <li >h1 - h6</li>
+                <li >p</li>
+                <li >form</li>
+                <li >header</li>
+                <li>footer</li>
+                <li>section</li>
+            </ul>
+         <h2 >Inline Elements</h2>
+         <p >An inline element DOES NOT start on a new line and only takes up as much width as necessary.</p>
+         <p>This is <span class="span1">an inline span element inside</span> a paragraph.</p>
+         <p>Examples of inline elements :-</p>
+            <ul>
+               <li>span</li>
+               <li>a</li>
+               <li>img</li>
+            </ul>
+            
+            <p style="text-align: center;">ADVERTISEMENT</p>
+            <h2>The display Property Values</h2>
+            <p>The <span>display</span> property has many values:</p>
+            <table border="1">
+                <thead>
+                    <th>Value</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                          <td>inline</td>
+                          <td>Displays an element as an inline element</td>
+                    </tr>
+                    <tr>
+                        <td>block</td>
+                        <td>Displays an element as a block element</td>
+                    </tr>
+                    <tr>
+                        <td>contents</td>
+                        <td>Makes the container disappear, making the child elements children of the element the next level up in the DOM</td>
+                    </tr>
+                    <tr>
+                        <td>flex</td>
+                        <td>Displays an element as a block-level flex container</td>
+                    </tr>
+                    <tr>
+                        <td>grid</td>
+                        <td>Displays an element as a block-level grid container</td>
+                    </tr>
+                    <tr>
+                        <td>inline-block</td>
+                        <td>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</td>
+                    </tr>
+                    <tr>
+                        <td>inline-flex</td>
+                        <td>Displays an element as an inline-level flex container</td>
+                    </tr>
+                    <tr>
+                        <td>inline-grid</td>
+                        <td>Displays an element as an inline-level grid container</td>
+                    </tr>
+                    <tr>
+                        <td>inline-table</td>
+                        <td>The element is displayed as an inline-level table</td>
+                    </tr>
+                    <tr>
+                        <td>list-item</td>
+                        <td>Let the element behave like a li element</td>
+                    </tr>
+                    <tr>
+                        <td>run-in</td>
+                        <td>Displays an element as either block or inline, depending on context</td>
+                    </tr>
+                    <tr>
+                        <td>table</td>
+                        <td>Let the element behave like a table element</td>
+                    </tr>
+                    <tr>
+                        <td>table-caption</td>
+                        <td>Let the element behave like a caption element</td>
+                    </tr>
+                    <tr>
+                        <td>table-column-group</td>
+                        <td>Let the element behave like a colgroup element</td>
+                    </tr>
+                    <tr>
+                        <td>table-header-group</td>
+                        <td>Let the element behave like a thead element</td>
+                    </tr>
+                    <tr>
+                        <td>table-footer-group</td>
+                        <td>Let the element behave like a tfoot element</td>
+                    </tr>
+                    <tr>
+                        <td>table-row-group</td>
+                        <td>Let the element behave like a tbody element</td>
+                    </tr>
+                    <tr>
+                        <td>table-cell</td>
+                        <td>Let the element behave like a td element</td>
+                    </tr>
+                    <tr>
+                        <td>table-column</td>
+                        <td>Let the element behave like a col element</td>
+                    </tr>
+                    <tr>
+                        <td>table-row</td>
+                        <td>Let the element behave like a tr element</td>
+                    </tr>
+                    <tr>
+                        <td>none</td>
+                        <td>The element is completely removed</td>
+                    </tr>
+                    <tr>
+                        <td>initial</td>
+                        <td>Sets this property to its default value</td>
+                    </tr>
+                    <tr>
+                        <td>inherit</td>
+                        <td>Inherits this property from its parent element</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Display: none;</h2>
+            <p><span>display: none;</span> is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.</p>
+            <p>The <span>script</span> element uses display: none; as default.</p>
+            <button type="button" class="btn3">Click to show panel</button>
+            <h2>Override The Default Display Value</h2>
+            <p>As mentioned, every element has a default display value. However, you can override this.</p>
+            <p>Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.</p>
+            <p>A common example is making inline <span>li</span> elements for horizontal menus:</p>
+        </div>
+   
+
+
+</div>
+</body>
+</html>
